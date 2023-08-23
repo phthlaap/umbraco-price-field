@@ -6,13 +6,14 @@
     <PackageId>PriceField</PackageId>
     <Title>Price Field for Umbraco</Title>
     <Description>This package define price field for Umbraco</Description>
-    <PackageTags>umbraco plugin package</PackageTags>
+    <PackageTags>umbraco plugin package umbraco-marketplace</PackageTags>
     <Authors>phthlaap</Authors>
     <PackageProjectUrl>https://github.com/phthlaap/umbraco-price-field</PackageProjectUrl>
     <RepositoryUrl>https://github.com/phthlaap/umbraco-price-field</RepositoryUrl>
     <RepositoryType>github</RepositoryType>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>

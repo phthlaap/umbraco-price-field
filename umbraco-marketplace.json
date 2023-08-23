@@ -1,0 +1,15 @@
+{
+  "$schema": "https://marketplace.umbraco.com/umbraco-marketplace-schema.json",
+  "AuthorDetails": {
+    "Description": "This package will provide a new property editor for price field.",
+    "Url": "https://lap-trinh.net/"
+  },
+  "Category": "Editor Tools",
+  "IssueTrackerUrl": "https://github.com/phthlaap/umbraco-price-field/issues",
+  "LicenseTypes": ["Free"],
+  "PackageType": "Package",
+  "Tags": [
+    "Price Field",
+    "Property Editor"
+  ]
+}
