@@ -1,0 +1,43 @@
+{
+  "propertyEditors": [
+    {
+      "alias": "Price field editor",
+      "name": "Price Field",
+      "icon": "icon-coin-dollar",
+      "group": "Common",
+      "editor": {
+        "view": "~/App_Plugins/PriceField/pricefield.html",
+        "supportsReadOnly": true
+      },
+      "prevalues": {
+        "fields": [
+          {
+            "label": "Currency?",
+            "description": "Show currency symbol",
+            "key": "isCurrencyEnabled",
+            "view": "boolean"
+          },
+          {
+            "label": "Currency symbol",
+            "description": "The symbol of currency, such as $, vnđ",
+            "key": "currencySymbol",
+            "view": "textstring"
+          },
+          {
+            "label": "Currency position",
+            "description": "Show the currency symbol before or after the input",
+            "key": "currencySymbolPosition",
+            "view": "~/App_Plugins/PriceField/symbol-position-select.html"
+          }
+        ]
+      }
+    }
+  ],
+  "css": [
+    "~/App_Plugins/PriceField/price-field.css"
+  ],
+  "javascript": [
+    "~/App_Plugins/PriceField/price-field.controller.js",
+    "~/App_Plugins/PriceField/symbol-position.controller.js"
+  ]
+}

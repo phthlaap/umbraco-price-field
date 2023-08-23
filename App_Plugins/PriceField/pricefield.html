@@ -1,0 +1,12 @@
+<div class="price-field" ng-controller="PriceFieldPluginController">
+    <div style="display: flex">
+        <div ng-If="model.config.isCurrencyEnabled && model.config.currencySymbolPosition == 'Before'" class="symbol before">
+            {{model.config.currencySymbol}}
+        </div>
+        <input type="number" ng-model="model.value" value="{{model.value}}">
+        <div ng-If="model.config.isCurrencyEnabled && model.config.currencySymbolPosition == 'After'" class="symbol before">
+            {{model.config.currencySymbol}}
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/@umbraco-ui/uui@latest/dist/uui.min.js"></script>

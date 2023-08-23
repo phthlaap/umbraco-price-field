@@ -1,0 +1,10 @@
+.price-field .symbol {
+    user-select:none;
+    padding: 0 var(--uui-size-3);
+    border-right: 1px solid var(--uui-input-border-color, var(--uui-color-border));
+    background: #f3f3f3;
+    color: grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

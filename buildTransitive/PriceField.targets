@@ -1,0 +1,21 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PriceFieldContentFilesPath>$(MSBuildThisFileDirectory)..\App_Plugins\PriceField\**\*.*</PriceFieldContentFilesPath>
+  </PropertyGroup>
+
+  <Target Name="CopyPriceFieldAssets" BeforeTargets="Build">
+    <ItemGroup>
+      <PriceFieldContentFiles Include="$(PriceFieldContentFilesPath)" />
+    </ItemGroup>
+    <Message Text="Copying PriceField files: $(PriceFieldContentFilesPath) - #@(PriceFieldContentFiles->Count()) files" Importance="high" />
+    <Copy SourceFiles="@(PriceFieldContentFiles)" DestinationFiles="@(PriceFieldContentFiles->'$(MSBuildProjectDirectory)\App_Plugins\PriceField\%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" />
+  </Target>
+
+  <Target Name="ClearPriceFieldAssets" BeforeTargets="Clean">
+    <ItemGroup>
+      <PriceFieldDir Include="$(MSBuildProjectDirectory)\App_Plugins\PriceField\" />
+    </ItemGroup>
+    <Message Text="Clear old PriceField data" Importance="high" />
+    <RemoveDir Directories="@(PriceFieldDir)" />
+  </Target>
+</Project>

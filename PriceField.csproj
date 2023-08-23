@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ContentTargetFolders>.</ContentTargetFolders>
+    <Product>PriceField</Product>
+    <PackageId>PriceField</PackageId>
+    <Title>Price Field for Umbraco</Title>
+    <Description>This package define price field for Umbraco</Description>
+    <PackageTags>umbraco plugin package</PackageTags>
+    <Authors>phthlaap</Authors>
+    <PackageProjectUrl>https://github.com/phthlaap/umbraco-price-field</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/phthlaap/umbraco-price-field</RepositoryUrl>
+    <RepositoryType>github</RepositoryType>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Umbraco.Cms.Web.Website" Version="12.0.1" />
+    <PackageReference Include="Umbraco.Cms.Web.BackOffice" Version="12.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="App_Plugins\PriceField\**" ExcludeFromSingleFile="true" CopyToPublishDirectory="Always" />
+    <None Include="buildTransitive\**" Pack="true" PackagePath="buildTransitive" />
+    <None Include="README.md" Pack="true" PackagePath="\"/>
+  </ItemGroup>
+</Project>
